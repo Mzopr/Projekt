@@ -1,0 +1,35 @@
+<%- include ../layouts/header.ejs %>
+<p>Zalogowano: <span><%=username%></span></p>
+<button onclick="logout()">Wyloguj</button>
+<div class="page-data">
+  <div class="data-table">
+    <table>
+      <tr>
+        <th width="50px">Nr.</th>
+        <th>imie</th>
+        <th>nazwisko</th>
+        <th>wiek</th>
+        <th>czyŻywy</th>
+      </tr>
+      <% if(data.length){
+        for(var i = 0; i< data.length; i++){ %>
+      <tr>
+        <td><%=(i+1)%></td>
+        <td><%=data[i].imie%></td>
+        <td><%=data[i].nazwisko%></td>
+        <td><%=data[i].wiek%></td>
+        <td><%=data[i].czyŻywy%></td>
+      </tr>
+      <% }
+      } else {
+        %>
+      <tr>
+        <td colspan="6">Brak sławnych ludzi</td>
+      </tr>
+      <%}
+       %>
+    </table>
+  </div>
+</div>
+
+<%- include ../layouts/footer.ejs %>

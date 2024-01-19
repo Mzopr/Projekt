@@ -1,0 +1,15 @@
+<%- include ../layouts/header.ejs %>
+<p>Zalogowano: <span><%= username %></span></p>
+<p><%= message %></p>
+
+<form method="POST">
+    <p><label>imię</label> <input type="text" name="imię"></p>
+    <p><label>nazwisko</label> <input type="text" name="nazwisko"></p>
+    <p><label>login</label> <input type="text" name="login"></p>
+    <p><label>hasło</label> <input type="password" name="hasło"></p>
+    <p><label>email</label> <input type="text" name="email"></p>
+    <p><label>telefon</label> <input type="text" name="telefon"></p>
+    <p><label>czyAdmin</label> <input type="number" min="0" max="1" name="czyAdmin"></p>
+    <p><input type="submit" value="Utwórz"></p>
+</form>
+<%- include ../layouts/footer.ejs %>
